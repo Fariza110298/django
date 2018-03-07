@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>KAFEDRA: {{ kafedra.first_name }}, {{ kafedra.last_name }} </h1>
+  </n>{{kafedra.date_of_birth}}
+  <div style="margin-left:20px;margin-top:20px">
+  <p><strong>BOOKS:</strong> {{ student.title }}</p>
+  <p><strong>last_name:</strong> <a href="">{{ kafedra.last_name }}</a></p>
+  <p><strong>first_name:</strong> <a href="">{{ kafedra.first_name }}</a></p> <!--  -->
+  <p><strong>date_of_birth:</strong> {{ kafedra.date_of_birth }}</p> 
+  <p><strong>date_of_death:</strong> {{ kafedra.date_of_death }}</p>  
+  </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Student</h1>
+
+    {% if studentinstance_list %}
+    <ul>
+
+      {% for studentinst in studentinstance_list %} 
+      <li class="{% if studentinst.is_overdue %}text-danger{% endif %}">
+        <a href="{% url 'student-detail' studentinst.student.pk %}">{{studentinst.student.title}}</a> ({{ studentinst.due_back }})        
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+    
+    {% endif %}       
+{% endblock %}

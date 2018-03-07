@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Kafedra List</h1>
+
+    {% if kafedra_list %}
+    <ul>
+
+      {% for kafedra in kafedra_list %}
+      <li>
+        <a href="{{ kafedra.get_absolute_url }}">{{kafedra.first_name}},{{kafedra.last_name}}({{kafedra.date_of_birth}})</a> ({{kafedra.date_of_death}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p></p>
+    {% endif %}       
+{% endblock %}
